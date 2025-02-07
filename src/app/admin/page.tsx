@@ -12,8 +12,8 @@ export default function AdminLogin() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const loginEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
-    const loginPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
+    const loginEmail = process.env.NEXT_PUBLIC_EMAIL;
+    const loginPassword = process.env.NEXT_PUBLIC_PASSWORD;
 
     if (email === loginEmail && password === loginPassword) {
       localStorage.setItem("isLoggedIn", "true");
@@ -28,7 +28,7 @@ export default function AdminLogin() {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-200">
       <form onSubmit={handleLogin} className="bg-white p-6 rounded-lg shadow-lg w-80">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-800">Admin Login</h2>
+        <h2 className="text-2xl font-semibold mb-4 flex font-serif justify-center text-gray-800">Admin Login</h2>
         <input
           type="email"
           placeholder="Email"
